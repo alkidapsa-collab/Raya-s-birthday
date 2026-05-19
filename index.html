@@ -1,0 +1,2413 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Raya's Birthday 🎂</title>
+
+<style>
+    html{
+    scroll-behavior:smooth;
+}
+
+/* =========================
+   GLASS NAVBAR
+========================= */
+
+.glass-navbar{
+
+    position:fixed;
+
+    top:20px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:90%;
+    max-width:1000px;
+
+    padding:15px 30px;
+
+    display:flex;
+
+    justify-content:space-between;
+    align-items:center;
+
+    background:
+    rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(15px);
+
+    border:
+    1px solid rgba(255,255,255,0.15);
+
+    border-radius:25px;
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,0.25);
+
+    z-index:999;
+}
+
+/* LOGO */
+
+.nav-logo{
+
+    font-size:22px;
+    font-weight:bold;
+
+    color:white;
+
+    text-shadow:
+        0 0 10px hotpink;
+}
+
+/* MENU */
+
+.nav-links{
+
+    display:flex;
+
+    gap:25px;
+
+    list-style:none;
+}
+
+.nav-links a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:16px;
+    font-weight:500;
+
+    transition:0.3s;
+}
+
+/* HOVER */
+
+.nav-links a:hover{
+
+    color:#ffb6d9;
+
+    text-shadow:
+        0 0 10px hotpink;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:700px){
+
+    .glass-navbar{
+
+        flex-direction:column;
+
+        gap:10px;
+
+        padding:15px;
+    }
+
+    .nav-links{
+
+        gap:15px;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+    }
+}
+/* =========================
+   INTRO SCREEN
+========================= */
+
+.intro-screen{
+
+    position:fixed;
+    inset:0;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.85),
+        rgba(20,20,20,0.95)
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+}
+
+.intro-box{
+
+    width:90%;
+    max-width:500px;
+
+    padding:40px 30px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    background:
+    rgba(255,255,255,0.1);
+
+    backdrop-filter:blur(15px);
+
+    border:
+    1px solid rgba(255,255,255,0.2);
+
+    box-shadow:
+        0 0 40px rgba(255,105,180,0.4);
+}
+
+.intro-box h1{
+
+    font-size:40px;
+    margin-bottom:20px;
+
+    color:white;
+
+    text-shadow:
+        0 0 10px hotpink,
+        0 0 25px hotpink;
+}
+
+.intro-box p{
+
+    font-size:18px;
+    line-height:1.7;
+
+    color:white;
+
+    margin-bottom:30px;
+}
+
+.intro-box button{
+
+    padding:14px 40px;
+
+    border:none;
+    border-radius:50px;
+
+    font-size:18px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        145deg,
+        hotpink,
+        deeppink
+    );
+
+    box-shadow:
+        0 0 20px hotpink;
+
+    transition:0.3s;
+}
+
+.intro-box button:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:
+        0 0 35px hotpink;
+}
+/* =========================
+   GIF KIRI & KANAN
+========================= */
+
+/* WRAPPER */
+.gif-wrapper{
+
+    position:absolute;
+    top:400px;
+
+    z-index:5;
+}
+
+/* POSISI */
+.gif-left{
+    left:calc(50% - 390px);
+}
+.gif-right{
+    left:calc(50% + 200px);
+}
+
+/* GIF */
+.gif{
+
+    width:170px;
+    height:170px;
+
+    border-radius:50%;
+    object-fit:cover;
+
+    border:4px solid black;
+
+    box-shadow:
+        0 0 25px rgba(0,0,0,0.7),
+        0 0 45px black;
+
+    animation:floatGif 3s ease-in-out infinite;
+}
+
+/* MAHKOTA */
+.crown{
+
+    position:absolute;
+
+    width:90px;
+
+    left:50%;
+    top:-60px;
+
+    transform:
+        translateX(-50%)
+        rotate(-5deg);
+
+    z-index:10;
+
+    pointer-events:none;
+
+    animation:crownFloat 3s ease-in-out infinite;
+}
+
+/* ANIMASI GIF */
+@keyframes floatGif{
+
+    0%,100%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+/* ANIMASI MAHKOTA */
+@keyframes crownFloat{
+
+    0%,100%{
+        transform:
+            translateX(-50%)
+            translateY(0px)
+            rotate(-5deg);
+    }
+
+    50%{
+        transform:
+            translateX(-50%)
+            translateY(-12px)
+            rotate(-2deg);
+    }
+}
+/* RESPONSIVE */
+
+@media(max-width:900px){
+.gif{
+    width:90px;
+    height:90px;
+}
+
+.crown{
+    width:50px;
+    top:-1px;
+}
+
+.gif-left{
+    left:5px;
+}
+
+.gif-right{
+    right:5px;
+}
+    .gif{
+
+        width:90px;
+        height:90px;
+
+        top:170px;
+    }
+
+    .gif-left{
+        left:5px;
+    }
+
+    .gif-right{
+        right:5px;
+    }
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    overflow-x:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    padding:40px 20px;
+    color:white;
+}
+
+/* =========================
+   BACKGROUND FOTO
+========================= */
+
+.background{
+    position:fixed;
+    inset:0;
+    z-index:-3;
+}
+
+.background video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(0.35);
+}
+
+/* OVERLAY */
+.overlay{
+    position:fixed;
+    inset:0;
+    background:
+    linear-gradient(
+        rgba(255,105,180,0.2),
+        rgba(0,0,0,0.6)
+    );
+    z-index:-2;
+}
+
+/* BINTANG */
+.stars{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+}
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    animation:blink 2s infinite;
+}
+
+@keyframes blink{
+    0%,100%{
+        opacity:0.2;
+    }
+    50%{
+        opacity:1;
+    }
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+    width:100%;
+    max-width:1300px;
+    text-align:center;
+
+    padding-top:120px;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.title{
+    font-size:65px;
+    font-weight:bold;
+    margin-bottom:20px;
+
+    text-shadow:
+        0 0 10px rgb(231, 10, 231),
+        0 0 20px hotpink,
+        0 0 40px hotpink;
+
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+.subtitle{
+
+    font-size:20px;
+
+    color:#ffd6e7;
+
+    margin-bottom:30px;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.5);
+
+    animation:fadeIn 2s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+/* =========================
+   KUE
+========================= */
+
+.cake{
+    position:relative;
+    z-index:5;
+    width:300px;
+    height:280px;
+    margin:20px auto;
+}
+
+.plate{
+    position:absolute;
+    width:320px;
+    height:28px;
+    background:#ddd;
+    border-radius:50%;
+    bottom:0;
+    left:-10px;
+}
+
+.layer{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    border-radius:20px;
+
+    box-shadow:
+        inset -10px -10px 20px rgba(0,0,0,0.2),
+        inset 10px 10px 20px rgba(255,255,255,0.2),
+        0 10px 25px rgba(0,0,0,0.3);
+}
+
+.layer1{
+    width:260px;
+    height:90px;
+    bottom:20px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #ff4f8b,
+        #ff8db4
+    );
+}
+
+.layer2{
+    width:200px;
+    height:75px;
+    bottom:95px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #ff9fc0,
+        #ffd6e7
+    );
+}
+
+.layer3{
+    width:140px;
+    height:60px;
+    bottom:160px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #fff0f5,
+        #ffdce8
+    );
+}
+
+/* ICING */
+
+.icing{
+    position:absolute;
+    width:100%;
+    height:18px;
+    background:white;
+    border-radius:50%;
+    top:0;
+}
+
+/* API */
+/* =========================
+   ANGKA UMUR
+========================= */
+
+.number{
+    position:absolute;
+
+    top:-20px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:55px;
+    font-weight:bold;
+
+    color:white;
+
+    text-shadow:
+        0 0 10px #fff,
+        0 0 20px hotpink,
+        0 0 40px hotpink,
+        0 0 70px hotpink;
+
+    z-index:10;
+
+    animation:floatNumber 2s ease-in-out infinite;
+}
+
+@keyframes floatNumber{
+
+    0%,100%{
+        transform:
+            translateX(-50%)
+            translateY(0px);
+    }
+
+    50%{
+        transform:
+            translateX(-50%)
+            translateY(-8px);
+    }
+}
+
+@keyframes flicker{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.3);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+/* =========================
+   LILIN ANGKA 19
+========================= */
+
+.number-candle{
+
+    position:absolute;
+
+    left:50%;
+    top:-5px;
+
+    transform:translateX(-50%);
+
+    display:flex;
+    gap:5px;
+
+    z-index:20;
+}.num{
+
+    font-size:90px;
+    font-weight:900;
+    line-height:1;
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+    repeating-linear-gradient(
+        45deg,
+        white 0px,
+        white 10px,
+        rgb(255, 0, 0) 10px,
+        rgb(255, 0, 0) 20px
+    );
+
+    background-clip:text;
+    -webkit-background-clip:text;
+
+    color:transparent;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.7),
+        0 0 20px hotpink;
+
+    position:relative;
+}
+/* API */
+
+.flame{
+
+    position:absolute;
+
+    width:22px;
+    height:22px;
+
+    background:gold;
+
+    border-radius:50%;
+
+    box-shadow:
+        0 0 20px gold,
+        0 0 40px orange,
+        0 0 60px yellow;
+
+    animation:flicker 0.2s infinite;
+}
+
+/* POSISI API */
+
+.flame1{
+    top:-20px;
+    left:18px;
+}
+
+.flame2{
+    top:-20px;
+    right:18px;
+}
+/* =========================
+   MAKE A WISH TEXT
+========================= */
+
+#wishText{
+
+    position:absolute;
+
+    top:250px;
+
+    left:50%;
+
+    transform:
+        translateX(-50%)
+        translateY(20px);
+z-index:9999 ;
+    font-size:52px;
+    font-weight:bold;
+
+    color:white;
+
+    opacity:0;
+
+    z-index:1000;
+
+    pointer-events:none;
+
+    text-shadow:
+        0 0 10px white,
+        0 0 25px hotpink,
+        0 0 50px hotpink,
+        0 0 90px hotpink;
+
+    transition:1.2s;
+}
+#wishText.show{
+
+    opacity:1;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+}
+/* =========================
+   GRID SURAT
+========================= */
+
+.letters{
+    margin-top:40px;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(260px,1fr));
+
+    gap:20px;
+
+    align-items:start;
+}
+
+/* KARTU */
+
+.card{
+    background:
+    rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(10px);
+
+    border:
+    1px solid rgba(255,255,255,0.2);
+
+    border-radius:25px;
+
+    padding:20px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.25);
+
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* LOGO */
+
+.logo{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid white;
+    margin-bottom:10px;
+
+    box-shadow:
+        0 0 20px rgba(255,255,255,0.5);
+}
+
+/* JUDUL */
+
+.card h2{
+    margin-bottom:15px;
+}
+
+/* ISI SURAT */
+
+.message{
+    line-height:1.7;
+    font-size:15px;
+}
+
+/* NAMA */
+
+.sender1{
+    margin-top:15px;
+    font-weight:bold;
+    color:#f30707;
+}
+.sender2{
+    margin-top:15px;
+    font-weight:bold;
+    color:#e6ee0e;
+}
+.sender3{
+    margin-top:15px;
+    font-weight:bold;
+    color:#16d719;
+}
+.sender4{
+    margin-top:15px;
+    font-weight:bold;
+    color:#0e47d7;
+}
+
+/* =========================
+   ENVELOPE LETTER
+========================= */
+
+.red-letter .envelope-body{
+    background:linear-gradient(
+        145deg,
+        #e2294b,
+     #ee2a4e
+    );
+}
+
+.red-letter .envelope-flap{
+    background:linear-gradient(
+        145deg,
+        #e92828,
+        #ef233c
+    );
+}
+
+.yellow-letter .envelope-body{
+    background:linear-gradient(
+        145deg,
+        #d7e540,
+        #eae74a
+    );
+}
+
+.yellow-letter .envelope-flap{
+    background:linear-gradient(
+        145deg,
+        #99c70e,
+        #fffb00
+    );
+}
+
+.green-letter .envelope-body{
+    background:linear-gradient(
+        145deg,
+        #44d67d,
+        #8cffb5
+    );
+}
+
+.green-letter .envelope-flap{
+    background:linear-gradient(
+        145deg,
+        #1fb85c,
+        #58e38d
+    );
+}
+
+.blue-letter .envelope-body{
+    background:linear-gradient(
+        145deg,
+        #4da6ff,
+        #8ed0ff
+    );
+}
+
+.blue-letter .envelope-flap{
+    background:linear-gradient(
+        145deg,
+        #2b7cff,
+        #5db2ff
+    );
+}
+
+.letter-box:hover{
+
+    transform:translateY(-8px);
+}
+/* AMPLOP */
+
+.envelope{
+
+    position:relative;
+
+    width:100%;
+    height:220px;
+
+    margin-top:70px;
+
+    overflow:hidden;
+}
+
+/* BODY AMPLOP */
+
+.envelope-body{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        145deg,
+        #ff8db4,
+        #ffb6cf
+    );
+
+    border-radius:20px;
+
+    z-index:2;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* TUTUP AMPLOP */
+
+.envelope-flap{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:110px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #ff6fa5,
+        #ff95bb
+    );
+
+    clip-path:
+    polygon(
+        0 0,
+        100% 0,
+        50% 100%
+    );
+
+    transform-origin:top;
+
+    transition:0.8s;
+
+    z-index:4;
+}
+
+/* SURAT */
+
+.letter-paper{
+
+    position:absolute;
+
+    left:50%;
+    top:95px;
+
+    transform:translateX(-50%);
+
+    width:82%;
+    height:135px;
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:18px;
+
+    color:#333;
+
+    text-align:center;
+
+    transition:0.8s ease;
+
+    z-index:1;
+
+    overflow:hidden;
+
+    box-shadow:none;
+}
+/* BUKA AMPLOP */
+
+.letter-box.open .envelope{
+    overflow:visible;
+}
+
+.letter-box.open .letter-paper{
+
+    top:-140px;
+
+    height:260px;
+
+    overflow:auto;
+
+    z-index:20;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* FOTO */
+
+.logo{
+
+    width:70px;
+    height:70px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    margin-bottom:10px;
+
+    border:3px solid hotpink;
+}
+/* ICON SURAT */
+
+.mail-icon{
+
+    font-size:60px;
+    margin-bottom:15px;
+
+    animation:floatMail 2s ease-in-out infinite;
+}
+
+@keyframes floatMail{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+}
+
+/* LOGO DEPAN */
+
+.front-logo{
+
+    width:90px;
+    height:90px;
+
+    border-radius:50%;
+    object-fit:cover;
+
+    border:3px solid white;
+
+    box-shadow:
+        0 0 20px rgba(255,255,255,0.5);
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    z-index:5;
+}
+.envelope-body{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        145deg,
+        #ff8db4,
+        #ffb6cf
+    );
+
+    border-radius:20px;
+
+    z-index:2;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.3);
+}
+.front-logo{
+
+    transition:0.4s;
+}
+
+.letter-box:hover .front-logo{
+
+    transform:
+        translate(-50%,-15%)
+        scale(1.08);
+}
+/* =========================
+   GALERI POLAROID
+========================= */
+
+.polaroid-title{
+
+    margin-top:50px;
+    margin-bottom:30px;
+
+    font-size:38px;
+    font-weight:bold;
+
+    text-shadow:
+        0 0 10px hotpink,
+        0 0 25px hotpink;
+}
+
+.polaroid-gallery{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+
+    margin-bottom:50px;
+}
+
+.polaroid{
+
+    width:220px;
+
+    background:white;
+
+    padding:15px 15px 50px;
+
+    border-radius:8px;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.4);
+
+    transition:0.4s;
+
+    position:relative;
+}
+
+.polaroid img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+.polaroid img:hover{
+
+    transform:scale(1.03);
+
+    box-shadow:
+        0 0 20px hotpink;
+}
+.polaroid p{
+
+    position:absolute;
+
+    bottom:15px;
+
+    left:0;
+    right:0;
+
+    text-align:center;
+
+    color:#333;
+
+    font-weight:bold;
+
+    font-size:18px;
+
+    font-family:cursive;
+}
+
+/* ROTASI */
+
+.rotate-left{
+    transform:rotate(-5deg);
+}
+
+.rotate-right{
+    transform:rotate(5deg);
+}
+
+/* HOVER */
+
+.polaroid:hover{
+
+    transform:
+        scale(1.07)
+        rotate(0deg);
+
+    z-index:10;
+}
+/* AUDIO */
+.countdown-box{
+
+    margin:40px auto;
+
+    width:320px;
+
+    padding:20px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.25);
+}
+
+#countdown{
+
+    margin-top:10px;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    color:#fff0f5;
+
+    text-shadow:
+        0 0 10px hotpink;
+}
+audio{
+    margin-top:30px;
+    width:300px;
+}
+/* =========================
+   CORE MEMORY VIEWER
+========================= */
+
+.memory-viewer{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    rgba(0,0,0,0.75);
+
+    backdrop-filter:blur(12px);
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    opacity:0;
+    pointer-events:none;
+
+    transition:0.5s;
+
+    z-index:99999;
+}
+
+.memory-viewer.active{
+
+    opacity:1;
+
+    pointer-events:auto;
+}
+
+.memory-viewer img{
+
+    width:420px;
+    max-width:90%;
+
+    border-radius:30px;
+
+    border:5px solid white;
+
+    box-shadow:
+        0 0 30px white,
+        0 0 60px hotpink,
+        0 0 100px rgba(255,255,255,0.7);
+
+    animation:memoryPop 0.6s ease;
+}
+
+@keyframes memoryPop{
+
+    from{
+
+        transform:
+            scale(0.5)
+            rotate(-10deg);
+
+        opacity:0;
+    }
+
+    to{
+
+        transform:
+            scale(1)
+            rotate(0deg);
+
+        opacity:1;
+    }
+}
+/* =========================
+   MEMORY BUBBLE
+========================= */
+
+.memory-bubble{
+
+    position:fixed;
+
+    bottom:-100px;
+
+    width:80px;
+    height:80px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    opacity:0.5;
+
+    animation:floatBubble linear forwards;
+
+    z-index:0;
+
+    box-shadow:
+        0 0 25px rgba(255,255,255,0.4);
+}
+
+.memory-bubble img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+@keyframes floatBubble{
+
+    from{
+
+        transform:
+            translateY(0)
+            scale(0.8);
+
+        opacity:0;
+    }
+
+    to{
+
+        transform:
+            translateY(-120vh)
+            scale(1.2);
+
+        opacity:0.6;
+    }
+}
+/* =========================
+   CONFETTI
+========================= */
+
+.confetti{
+    position:fixed;
+    top:-20px;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+    }
+}
+.cursor-glow{
+
+    position:fixed;
+
+    width:250px;
+    height:250px;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(255,105,180,0.25),
+        transparent 70%
+    );
+
+    transform:
+        translate(-50%,-50%);
+
+    z-index:999;
+}
+/* =========================
+   EMOTION MODE
+========================= */
+
+.emotion-panel{
+
+    margin-top:25px;
+
+    display:flex;
+
+    gap:12px;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+}
+
+.emotion-panel button{
+
+    padding:10px 18px;
+
+    border:none;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    color:white;
+
+    background:
+    rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(10px);
+
+    border:
+    1px solid rgba(255,255,255,0.2);
+
+    transition:0.3s;
+}
+
+.emotion-panel button:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:
+        0 0 20px rgba(255,255,255,0.5);
+}
+/* =========================
+   CINEMATIC BLUR MODE
+========================= */
+.blur-mode .glass-navbar,
+.blur-mode .gif-wrapper,
+.blur-mode .letters,
+.blur-mode .polaroid-gallery,
+.blur-mode .countdown-box{
+    filter: blur(8px);
+transition: 1s;
+/* cake tetap jelas */
+.blur-mode .cake{
+    filter: none !important;
+}
+}
+/* TITLE + SUBTITLE ikut blur */
+.blur-mode .title,
+.blur-mode .subtitle{
+    filter: blur(6px);
+    transition: 1s;
+}
+/* =========================
+   AURORA BACKGROUND
+========================= */
+
+.aurora{
+
+    position:fixed;
+    inset:0;
+
+    z-index:-1;
+
+    overflow:hidden;
+
+    pointer-events:none;
+}
+
+.aurora::before,
+.aurora::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    opacity:0.45;
+
+    animation:
+        auroraMove 18s ease-in-out infinite;
+}
+
+/* PINK */
+
+.aurora::before{
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(255,0,140,0.9),
+        transparent 70%
+    );
+
+    top:-200px;
+    left:-150px;
+}
+
+/* BLUE */
+
+.aurora::after{
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(0,200,255,0.8),
+        transparent 70%
+    );
+
+    bottom:-250px;
+    right:-150px;
+
+    animation-delay:9s;
+}
+
+/* ANIMATION */
+
+@keyframes auroraMove{
+
+    0%{
+
+        transform:
+            translate(0,0)
+            scale(1);
+    }
+
+    25%{
+
+        transform:
+            translate(120px,80px)
+            scale(1.1);
+    }
+
+    50%{
+
+        transform:
+            translate(-80px,120px)
+            scale(0.9);
+    }
+
+    75%{
+
+        transform:
+            translate(100px,-50px)
+            scale(1.05);
+    }
+
+    100%{
+
+        transform:
+            translate(0,0)
+            scale(1);
+    }
+}
+</style>
+</head>
+
+<body>
+<nav class="glass-navbar">
+
+    <div class="nav-logo">
+        🎂 Raya
+    </div>
+
+    <ul class="nav-links">
+
+        <li><a href="#home">Home</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#letters">Letters</a></li>
+        <li><a href="#music">Music</a></li>
+
+    </ul>
+
+</nav>
+<!-- =========================
+     INTRO SCREEN
+========================= -->
+
+<div class="intro-screen" id="introScreen">
+
+    <div class="intro-box">
+
+        <h1>DUARRR</h1>
+
+        <p>
+            pake laptop Ray<br>
+            di hp error jir
+        </p>
+
+        <button onclick="enterWebsite()">
+            yes fren
+        </button>
+
+    </div>
+
+</div>
+<!-- =========================
+     BACKGROUND FOTO
+========================= -->
+
+<div class="background">
+
+    <!-- GANTI video.mp4 dengan nama video kamu -->
+    <video autoplay muted loop playsinline>
+        <source src="vidio background.mp4" type="video/mp4">
+    </video>
+
+</div>
+<div class="overlay"></div>
+<div class="aurora"></div>
+<!-- BINTANG -->
+<div class="stars"></div>
+
+<div class="container" id="home">
+
+    <!-- TITLE -->
+    <div class="title">
+    Selamat HBD
+</div>
+
+<div class="subtitle">
+    <span id="typing"></span>
+</div>
+<div class="emotion-panel">
+
+    <button onclick="setEmotion('joy')">😊 Joy</button>
+
+    <button onclick="setEmotion('sad')">😢 Sadness</button>
+
+    <button onclick="setEmotion('anger')">😡 Anger</button>
+
+    <button onclick="setEmotion('anxiety')">😨 Anxiety</button>
+
+    <button onclick="setEmotion('disgust')">🤢 Disgust</button>
+
+</div>
+<!-- GIF KIRI -->
+<div class="gif-wrapper gif-left">
+
+    <img
+    src="mahkota.png"
+    class="crown">
+
+    <img
+    src="gif raya.gif"
+    class="gif">
+
+</div>
+
+<!-- GIF KANAN -->
+<div class="gif-wrapper gif-right">
+
+    <img
+    src="mahkota.png"
+    class="crown">
+
+    <img
+    src="gifkanan2.gif"
+    class="gif">
+
+</div>
+
+
+    <!-- KUE -->
+    <div class="cake">
+
+        <div class="plate"></div>
+
+        <div class="layer layer1">
+            <div class="icing"></div>
+        </div>
+
+        <div class="layer layer2">
+            <div class="icing"></div>
+        </div>
+
+        <div class="layer layer3">
+            <div class="icing"></div>
+
+        </div>
+
+        <div class="number-candle">
+
+    <span class="num">1</span>
+    <span class="num">9</span>
+
+    <div class="flame flame1" onclick="blowCandles()"></div>
+<div class="flame flame2" onclick="blowCandles()"></div>
+
+</div>
+
+    </div>
+<div class="countdown-box">
+
+    <h2>Ada lgi nih yang nanya,umur 20 berapa hari lagi sih bang</h2>
+
+    <div id="countdown">
+        Loading...
+    </div>
+
+</div>
+<!-- =========================
+     GALERI POLAROID
+========================= -->
+
+<div class="polaroid-title" id="gallery">
+    core memory 📸
+</div>
+
+<div class="polaroid-gallery">
+
+    <div class="polaroid rotate-left">
+        <img src="foto1.jpeg">
+        <p>Bali🏖️</p>
+    </div>
+
+    <div class="polaroid rotate-right">
+        <img src="foto2.jpeg">
+        <p>Jujitsu🥋</p>
+    </div>
+
+    <div class="polaroid rotate-left">
+        <img src="foto3.jpeg">
+        <p>Highschool📖</p>
+    </div>
+
+    <div class="polaroid rotate-right">
+        <img src="foto4.jpeg">
+        <p>ITEBEEEEE🐘</p>
+    </div>
+
+</div>
+    <!-- =========================
+         4 SURAT
+    ========================= -->
+
+    <div class="letters" id="letters">
+
+    <!-- SURAT 1 -->
+    <div class="letter-box red-letter" onclick="this.classList.toggle('open')">
+
+        <div class="envelope">
+
+            <div class="envelope-flap"></div>
+
+            <div class="envelope-body">
+
+    <img
+    src="nabila.jpeg"
+    class="front-logo">
+
+</div>
+
+            <div class="letter-paper">
+
+                <img
+                src="nabila.jpeg"
+                class="logo">
+
+                <h2>Nabila</h2>
+
+                <div class="message">
+
+                    Habede rayyyyy<br><br>
+
+                    Semoga yg di semogakan
+                    dapat tersemogakan 🥳🥳<br><br>
+
+                    Yang terbaik dan apa yg
+                    ingin dicapai dapat tercapai 😘🎂
+
+                </div>
+
+                <div class="sender1">
+                    — Dari Nabila lovee🥰🥰
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- SURAT 2 -->
+    <div class="letter-box yellow-letter" onclick="this.classList.toggle('open')">
+
+        <div class="envelope">
+
+            <div class="envelope-flap"></div>
+
+            <div class="envelope-body">
+
+    <img
+    src="kemal.jpeg"
+    class="front-logo">
+
+</div>
+
+            <div class="letter-paper">
+
+                <img
+                src="kemal.jpeg"
+                class="logo">
+
+                <h2>Kemal</h2>
+
+                <div class="message">
+
+                    Selamat ulang tahun ke 19, semoga ada perbedaaan
+
+
+                </div>
+
+                <div class="sender2">
+                    — Dari Kemalontong
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- SURAT 3 -->
+    <div class="letter-box green-letter" onclick="this.classList.toggle('open')">
+
+        <div class="envelope">
+
+            <div class="envelope-flap"></div>
+
+            <div class="envelope-body">
+
+    <img
+    src="galih.jpeg"
+    class="front-logo">
+
+</div>
+
+            <div class="letter-paper">
+
+                <img
+                src="galih.jpeg"
+                class="logo">
+
+                <h2>Someone</h2>
+
+                <div class="message">
+
+                    Selamat ulang tahun dan terima kasih Raya semoga bisa semangat, sukses, dan sehat selalu 👍👍👍.
+
+                </div>
+
+                <div class="sender3">
+                    — Dari Gaylih
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- SURAT 4 -->
+    <div class="letter-box blue-letter" onclick="this.classList.toggle('open')">
+
+        <div class="envelope">
+
+            <div class="envelope-flap"></div>
+
+            <div class="envelope-body">
+
+    <img
+    src="bilah.jpeg"
+    class="front-logo">
+
+</div>
+
+            <div class="letter-paper">
+
+                <img
+                src="bilah.jpeg"
+                class="logo">
+
+                <h2>Special Message</h2>
+
+                <div class="message">
+
+                    HBD Ray<br><br>
+
+                    Semoga Allah selalu melindungi dari hal yang buruk, semoga apa yang didoakan setelah dan sebelum ini dapat terkabulkan,panjang umur sehat selalu <br>
+                    semoga ip nya diatas 3 terus<br> jujur awalnya mau bikin hadiah kaya ultah kemal cuman boncos,semoga website ini cukup buat jadi hadiah yh kawokawak tengkyu ramen nya 
+
+                </div>
+
+                <div class="sender4">
+                    — Dari tadi
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+    <!-- =========================
+         MUSIK
+    ========================= -->
+
+    <!-- GANTI lagu.mp3 -->
+    <audio id="music" autoplay loop controls>
+
+        <source
+        src="Free Skating.mp3"
+        type="audio/mpeg">
+
+    </audio>
+
+</div>
+<div id="wishText">
+    Make a wish ✨
+</div>
+
+<div class="cursor-glow"></div>
+
+<!-- =========================
+     CORE MEMORY VIEWER
+========================= -->
+
+<div class="memory-viewer" id="memoryViewer">
+
+    <img id="viewerImg">
+
+</div>
+<script>
+/* =========================
+   MASUK WEBSITE
+========================= */
+
+function enterWebsite(){
+
+    const intro = document.getElementById("introScreen");
+
+    intro.style.opacity = "0";
+    intro.style.transition = "1s";
+
+    setTimeout(()=>{
+
+        intro.style.display = "none";
+
+        // 🔊 START MUSIC DI SINI
+        const music = document.getElementById("music");
+        music.play();
+
+    },1000);
+}
+/* =========================
+   CONFETTI
+========================= */
+
+function createConfetti(){
+
+    const confetti =
+        document.createElement("div");
+
+    confetti.classList.add("confetti");
+confetti.innerHTML =
+    Math.random() > 0.7 ? "★" :
+    Math.random() > 0.4 ? "❤" : "";
+    document.body.appendChild(confetti);
+
+   const colors = [
+
+    "#FFD93D", // Joy (kuning)
+    "#4D96FF", // Sadness (biru)
+    "#6BCB77", // Disgust (hijau)
+    "#FF6B6B", // Anger (merah)
+    "#C77DFF", // Fear/Anxiety (ungu)
+    "#FF9F1C", // Anxiety orange
+    "#FFFFFF"  // sparkle putih
+
+];
+    confetti.style.left =
+        Math.random() *
+        window.innerWidth + "px";
+
+    confetti.style.background =
+        colors[
+            Math.floor(
+                Math.random() *
+                colors.length
+            )
+        ];
+
+    confetti.style.width =
+        Math.random()*10+6+"px";
+
+    confetti.style.height =
+        confetti.style.width;
+
+    confetti.style.borderRadius =
+        Math.random()>0.5
+        ? "50%"
+        : "0";
+
+    confetti.style.animationDuration =
+        Math.random()*3+2+"s";
+
+    setTimeout(()=>{
+
+        confetti.remove();
+
+    },5000);
+}
+
+let confettiInterval =
+setInterval(createConfetti,80);
+/* =========================
+   TYPING EFFECT
+========================= */
+
+const text =
+"happy 19th birthday yeyyyy ✨ pencet apinya";
+
+let index = 0;
+
+function typingEffect(){
+
+    if(index < text.length){
+
+        document.getElementById("typing")
+        .innerHTML += text.charAt(index);
+
+        index++;
+
+        setTimeout(typingEffect,80);
+    }
+}
+
+typingEffect();
+/* =========================
+   FLOATING MEMORY BUBBLE
+========================= */
+
+const memories = [
+
+    "foto1.jpeg",
+    "foto2.jpeg",
+    "foto3.jpeg",
+    "foto4.jpeg",
+    "bubble1.jpeg",
+    "bubble2.jpeg",
+    "bubble3.jpeg"
+
+];
+
+function createMemoryBubble(){
+
+    const bubble =
+        document.createElement("div");
+
+    bubble.classList.add("memory-bubble");
+
+    bubble.style.left =
+        Math.random()*100 + "vw";
+
+    bubble.style.width =
+        Math.random()*60 + 60 + "px";
+
+    bubble.style.height =
+        bubble.style.width;
+
+    bubble.style.animationDuration =
+        Math.random()*10 + 12 + "s";
+
+    const img =
+        document.createElement("img");
+
+    const randomMemory =
+        memories[
+            Math.floor(
+                Math.random() *
+                memories.length
+            )
+        ];
+
+    img.src = randomMemory;
+
+    bubble.appendChild(img);
+
+    /* CLICK EFFECT */
+    bubble.onclick = ()=>{
+
+        const viewer =
+            document.getElementById(
+                "memoryViewer"
+            );
+
+        const viewerImg =
+            document.getElementById(
+                "viewerImg"
+            );
+
+        viewerImg.src = randomMemory;
+
+        viewer.classList.add("active");
+    };
+
+    document.body.appendChild(bubble);
+
+    setTimeout(()=>{
+
+        bubble.remove();
+
+    },22000);
+}
+setInterval(createMemoryBubble,2000);
+/* =========================
+   CLOSE CORE MEMORY
+========================= */
+
+window.addEventListener("load", ()=>{
+
+    document
+    .getElementById("memoryViewer")
+    .onclick = function(){
+
+        this.classList.remove("active");
+    };
+
+});
+/* =========================
+   STARS
+========================= */
+
+const stars =
+    document.querySelector(".stars");
+
+for(let i=0;i<120;i++){
+
+    const star =
+        document.createElement("div");
+
+    star.classList.add("star");
+
+    star.style.left =
+        Math.random()*100+"%";
+
+    star.style.top =
+        Math.random()*100+"%";
+
+    star.style.animationDuration =
+        Math.random()*3+1+"s";
+
+    stars.appendChild(star);
+}
+/* =========================
+   COUNTDOWN
+========================= */
+
+const targetDate =
+new Date("May 20, 2027 00:00:00").getTime();
+
+setInterval(()=>{
+
+    const now = new Date().getTime();
+
+    const distance =
+        targetDate - now;
+
+    const days =
+        Math.floor(
+            distance /
+            (1000*60*60*24)
+        );
+
+    document.getElementById(
+        "countdown"
+    ).innerHTML =
+        days + " Hari Lagi";
+
+},1000);
+/* =========================
+   CURSOR GLOW
+========================= */
+
+const glow =
+document.querySelector(
+    ".cursor-glow"
+);
+
+document.addEventListener(
+    "mousemove",
+    (e)=>{
+
+        glow.style.left =
+            e.clientX + "px";
+
+        glow.style.top =
+            e.clientY + "px";
+});
+/* =========================
+   EMOTION MODE
+========================= */
+
+function setEmotion(emotion){
+
+    const aurora =
+        document.querySelector(".aurora");
+
+    const overlay =
+        document.querySelector(".overlay");
+
+    switch(emotion){
+
+        case "joy":
+
+            aurora.style.filter =
+                "hue-rotate(40deg) saturate(1.5)";
+
+            overlay.style.background =
+            "linear-gradient(rgba(255,215,0,0.2), rgba(0,0,0,0.5))";
+
+        break;
+
+        case "sad":
+
+            aurora.style.filter =
+                "hue-rotate(180deg) brightness(0.8)";
+
+            overlay.style.background =
+            "linear-gradient(rgba(0,120,255,0.25), rgba(0,0,0,0.6))";
+
+        break;
+
+        case "anger":
+
+            aurora.style.filter =
+                "hue-rotate(-50deg) saturate(2)";
+
+            overlay.style.background =
+            "linear-gradient(rgba(255,0,0,0.25), rgba(0,0,0,0.65))";
+
+        break;
+
+        case "anxiety":
+
+            aurora.style.filter =
+                "hue-rotate(260deg) saturate(1.5)";
+
+            overlay.style.background =
+            "linear-gradient(rgba(140,0,255,0.25), rgba(0,0,0,0.65))";
+
+        break;
+
+        case "disgust":
+
+            aurora.style.filter =
+                "hue-rotate(90deg) saturate(1.5)";
+
+            overlay.style.background =
+            "linear-gradient(rgba(0,255,120,0.2), rgba(0,0,0,0.6))";
+
+        break;
+    }
+}
+/* =========================
+   POLAROID CLICK VIEWER
+========================= */
+
+const polaroidImages =
+document.querySelectorAll(".polaroid img");
+
+const viewer =
+document.getElementById("memoryViewer");
+
+const viewerImg =
+document.getElementById("viewerImg");
+
+polaroidImages.forEach(img=>{
+
+    img.addEventListener("click",()=>{
+
+        viewerImg.src = img.src;
+
+        viewer.classList.add("active");
+    });
+
+});
+/* =========================
+   BLOW CANDLES
+========================= */
+
+function blowCandles(){
+
+    const flames =
+    document.querySelectorAll(".flame");
+
+    const wishText =
+    document.getElementById("wishText");
+
+    const overlay =
+    document.querySelector(".overlay");
+
+    /* MATIKAN API */
+    flames.forEach(flame=>{
+
+        flame.style.opacity = "0";
+
+        flame.style.transform =
+        "scale(0)";
+    });
+
+    /* STOP CONFETTI */
+    clearInterval(confettiInterval);
+
+    /* GELAPKAN BG */
+    overlay.style.background =
+    "linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85))";
+document.body.classList.add("blur-mode");
+    /* SHOW TEXT */
+    wishText.classList.add("show");
+
+    /* NYALAKAN LAGI SETELAH 3 DETIK */
+    setTimeout(()=>{
+
+        flames.forEach(flame=>{
+
+            flame.style.opacity = "1";
+
+            flame.style.transform =
+            "scale(1)";
+        });
+
+        overlay.style.background =
+        "linear-gradient(rgba(255,105,180,0.2), rgba(0,0,0,0.6))";
+document.body.classList.remove("blur-mode"); 
+        wishText.classList.remove("show");
+
+        confettiInterval =
+        setInterval(createConfetti,80);
+
+    },8000);
+}
+</script>
+
+</body>
+</html>
